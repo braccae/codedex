@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"workbench.colorTheme": "Quiet Light",
+		"workbench.preferredDarkColorTheme": "Shades of Purple",
+		"workbench.preferredLightColorTheme": "Quiet Light",
+		"window.autoDetectColorScheme": true,
+		"chat.sendElementsToChat.enabled": false,
+		"chat.sendElementsToChat.attachImages": false,
+		"chat.sendElementsToChat.attachCSS": false
+	}
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <style>
+      html, body, pre, code, kbd, samp {
+          font-family: "Press Start 2P";
+          background: #fdfddf;
+      }
+      footer {
+        background: #afae6d;
+      }
+      .header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: #eeec8f;
+        border: 1px solid #afae6d;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 1%;
+      }
+      .header-left {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: space-between;
+        height: 100%;
+      }
+      .header-links {
+        display: flex;
+        gap: 1rem;
+        font-size: x-small;
+        align-self: flex-end;
+      }
+      #header-title {
+        margin: 0;
+        font-size: x-large;
+        margin-top: 1rem;
+      }
+      #header-logo {
+        width: 5rem;
+      }
+      section > h6 {
+        text-align: right;
+      }
+      #entrees {
+        width: 75%;
+      }
+      #the-drinks {
+        background: #e7e7cc;
+      }
+    </style>
+    <title>Cafe Contessa</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <h1 id="header-title">Cafe Contessa</h1>
+            <div class="header-links">
+                <h2><a class="nes-btn is-warning" href="#menu">*Menu</a> </h2>
+                <h2><a class="nes-btn is-warning" href="#order">*Place your order</a></h2>
+            </div>
+        </div>
+        <img id="header-logo" src="img/contessa_ring.webp">
+    </div>
+    <section class="nes-container with-title" id="menu">
+        <h2 class="title">Menu</h2>
+        <h6>Each entree comes with 2 sides</h6>
+        <div id="entrees">
+            <article>
+                <h3>Chicken Parm</h3>
+                <img alt="" src="img/chicken_parm.webp">
+                <p>
+                    A breaded chicken breast cutlet, topped with our 
+                    homemade marinera 
+                    and a slice of fresh mozzorella cheese.
+                </p>
+            </article>
+            <article>
+                <h3>Eggplant Parm</h3>
+                <img alt="" src="img/eggplant_parm.webp">
+                <p>
+                    A thick slice of steamed eggplant, topped with our 
+                    homemade marinera 
+                    and a slice of fresh mozzorella cheese.
+                </p>
+            </article>
+            <article>
+                <h3>Stuffed Shells</h3>
+                <img alt="" src="img/stuffed_shells.webp">
+                <p>
+                    Three large shells, stuffed with a mixture of ricotta cheese,
+                     garlic, and parsley. Served with with our homemade marinera.
+                </p>
+            </article>
+            <article>
+                <h3>Spaghetti & Meatballs</h3>
+                <img alt="" src="img/spag.webp">
+                <p>
+                    A plate of spaghetti with our homemade marinera.
+                    Served with 3 homemade meatballs made with a mixture of
+                    pork, beef, and veal.
+                </p>
+            </article>
+        </div>
+        <div id="sides">
+            <h5>Sides:</h5>
+            <ul class="nes-list is-disc">
+                <li>House Salad</li>
+                <li>Soup of the day</li>
+                <li>Green beans</li>
+                <li>Roasted Asparagus</li>
+                <li>Chopped antipasta</li>
+                <li>Caramelized carrots</li>
+                <li>Fruit cup</li>
+            </ul>
+        </div>
+        <div id="drinks">
+            <h5>Drinks:</h5>
+            <ul class="nes-list is-circle">
+                <li>Espresso</li>
+                <li>Coffee</li>
+                <li>Italian soda</li>
+                <li>Fresca</li>
+                <li>Water</li>
+            </ul>
+
+        </div>
+    </section>
+    <section class="nes-container with-title" id="order">
+        <h2 class="title">Order</h2>
+        <div id="order-form">
+            <form>
+                <div class="nes-select" id="of-entree">
+                    <label for="order-form-entree">Entree:</label>
+                        <select required id="order-form-entree">
+                            <option value="" disabled selected hidden>Select...</option>
+                            <option value="0">Chicken Parm</option>
+                            <option value="1">Eggplant Parm</option>
+                            <option value="2">Stuffed Shells</option>
+                            <option value="3">Spaghetti & Meatballs</option>
+                        </select>
+                </div>
+                <div class="nes-select" id="of-side1">
+                    <label for="order-form-side1">First side dish:</label>
+                        <select required id="order-form-side1">
+                            <option value="" disabled selected hidden>Select...</option>
+                            <option value="0">House salad</option>
+                            <option value="1">Soup of the day</option>
+                            <option value="2">Green beans</option>
+                            <option value="3">Roasted Asparagus</option>
+                            <option value="4">Chopped antipasta</option>
+                            <option value="5">Caramelized carrots</option>
+                            <option value="6">Fruit cup</option>
+                        </select>
+                </div>
+                <div class="nes-select" id="of-side2">
+                    <label for="order-form-side2">Second side dish:</label>
+                        <select required id="order-form-side2">
+                            <option value="" disabled selected hidden>Select...</option>
+                            <option value="0">House salad</option>
+                            <option value="1">Soup of the day</option>
+                            <option value="2">Green beans</option>
+                            <option value="3">Roasted Asparagus</option>
+                            <option value="4">Chopped antipasta</option>
+                            <option value="5">Caramelized carrots</option>
+                            <option value="6">Fruit cup</option>
+                        </select>
+                </div>
+            </div>
+            <div id="the-drinks">
+                <label for="#the-drinks">Drinks:</label>
+                <br>
+                <label>
+                    <input type="radio" class="nes-radio" name="drink-selection">
+                    <span>Espresso</span>
+                </label>
+                <label>
+                    <input type="radio" class="nes-radio" name="drink-selection">
+                    <span>Coffee</span>
+                </label>
+                <label>
+                    <input type="radio" class="nes-radio" name="drink-selection">
+                    <span>Italian Soda</span>
+                </label>
+                <label>
+                    <input type="radio" class="nes-radio" name="drink-selection">
+                    <span>Fresca</span>
+                </label>
+                <label>
+                    <input type="radio" class="nes-radio" name="drink-selection">
+                    <span>Water</span>
+                </label>
+            </div>
+            <div id="special-instructions" class="nes-field">
+                <!-- <label for="special-instruction-field">Special instructions:</label>
+                <input type="textarea" id="special-instruction-field" class="nes-input"> -->
+                <textarea id="special-instruction-field" class="nes-input">
+                    Special instructions...
+                </textarea>
+            </div>
+            <div id="place-order">
+                <button type="submit"  class="nes-btn is-warning">
+                    Place your order!
+                </button>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <p>
+            Made with love by 
+        <a href="https://www.codedex.io/@Pants">Pants</a>
+        </p>
+    </footer>
+</body>
+</html>
