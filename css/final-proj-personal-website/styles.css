@@ -1,0 +1,20 @@
+header {
+    position: sticky;
+    top: 0;
+    background-color: darkviolet;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.nav-item {
+    color: rgb(255, 214, 214);
+}
+
+.nav-item:visited {
+    color: rgb(168, 199, 226);
+}
