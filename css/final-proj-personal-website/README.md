@@ -1,1 +1,1 @@
-I already have a portfolio website using the astro framework. I'd rather not change that so this will be mostly mocked.
+linktree-ish thing
