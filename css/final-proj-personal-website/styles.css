@@ -2,7 +2,6 @@ header {
     position: sticky;
     top: 0;
     background-color: darkviolet;
-    
 }
 
 nav {
@@ -17,4 +16,35 @@ nav {
 
 .nav-item:visited {
     color: rgb(168, 199, 226);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.game-card img,
+section img {
+    margin-right: 10px;
+}
+
+.logo-small {
+    height: 20px;
+    width: 20px;
+}
+
+.logo-medium {
+    height: 15%;
+    width: 15%;
+}
+
+#socials-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
