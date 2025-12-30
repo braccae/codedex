@@ -32,6 +32,29 @@ section img {
     margin-right: 10px;
 }
 
+.game-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+
+}
+
 .logo-small {
     height: 20px;
     width: 20px;
