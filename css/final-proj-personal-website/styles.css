@@ -6,6 +6,9 @@ html {
 html, body {
     height: 100%;
     margin: 0;
+    background-image: url(img/galaxy_center.webp);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 header,
@@ -16,11 +19,13 @@ footer {
     margin: 0;
     padding: 10px 0;
     box-sizing: border-box;
+    box-shadow: 2px 2px 50px #181926;
 }
 
 header {
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 footer {
@@ -86,8 +91,9 @@ section img {
     padding: 10px;
     border: 1px solid #f0c6c6;
     border-radius: 1rem;
-    background-color: #363a4f;
-    box-shadow: 2px 2px 50px #f0c6c6;
+    background-color: rgb(54, 58, 79, 0.5);
+    box-shadow: 2px 2px 25px #f0c6c6;
+    backdrop-filter: blur(10px);
 }
 
 .social-card {
@@ -102,8 +108,9 @@ section img {
     padding: 10px;
     border: 1px solid #f0c6c6;
     border-radius: 1rem;
-    background-color: #363a4f;
-    box-shadow: 2px 2px 50px rgb(202, 211, 245);
+    background-color: rgb(54, 58, 79, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 2px 25px rgb(23, 146, 153);
 }
 
 .card-content {
