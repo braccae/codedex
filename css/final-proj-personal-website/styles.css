@@ -35,11 +35,20 @@ nav {
     gap: 1em;
 }
 
-.nav-item {
+/* .nav-item {
     color: #8aadf4;
 }
 
 .nav-item:visited {
+    color: #c6a0f6;
+} */
+
+a {
+    color: #8aadf4;
+}
+
+a:visited {
+
     color: #c6a0f6;
 }
 
@@ -76,7 +85,7 @@ section img {
     margin: 10px;
     padding: 10px;
     border: 1px solid #f0c6c6;
-    border-radius: 5px;
+    border-radius: 1rem;
     background-color: #363a4f;
     box-shadow: 2px 2px 50px #f0c6c6;
 }
@@ -92,7 +101,7 @@ section img {
     margin: 10px;
     padding: 10px;
     border: 1px solid #f0c6c6;
-    border-radius: 5px;
+    border-radius: 1rem;
     background-color: #363a4f;
     box-shadow: 2px 2px 50px rgb(202, 211, 245);
 }
