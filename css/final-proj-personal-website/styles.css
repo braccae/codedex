@@ -1,7 +1,32 @@
+html {
+    background-color: #1e2030;
+    color: #cad3f5;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+header,
+footer {
+    width: 100%;
+    background-color: #181926;
+    color: #cad3f5;
+    margin: 0;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
 header {
     position: sticky;
     top: 0;
-    background-color: darkviolet;
+}
+
+footer {
+    text-align: center;
+    align-items: center;
+    bottom: 0;
 }
 
 nav {
@@ -11,11 +36,18 @@ nav {
 }
 
 .nav-item {
-    color: rgb(255, 214, 214);
+    color: #8aadf4;
 }
 
 .nav-item:visited {
-    color: rgb(168, 199, 226);
+    color: #c6a0f6;
+}
+
+body {
+    background-color: #1e2030;
+    color: #cad3f5;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
@@ -25,6 +57,7 @@ main {
     justify-content: center;
     margin: 0 auto;
     width: 85%;
+    flex: 1;
 }
 
 .game-card img,
@@ -42,9 +75,26 @@ section img {
     max-width: 100%;
     margin: 10px;
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid #f0c6c6;
     border-radius: 5px;
+    background-color: #363a4f;
+    box-shadow: 2px 2px 50px #f0c6c6;
+}
 
+.social-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 15%;
+    max-width: 100%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #f0c6c6;
+    border-radius: 5px;
+    background-color: #363a4f;
+    box-shadow: 2px 2px 50px rgb(202, 211, 245);
 }
 
 .card-content {
@@ -52,7 +102,6 @@ section img {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-
 }
 
 .logo-small {
