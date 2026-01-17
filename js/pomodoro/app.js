@@ -3,6 +3,8 @@ const startBtn = document.querySelector(".btn-start");
 const pauseBtn = document.querySelector(".btn-pause");
 const resetBtn = document.querySelector(".btn-reset");
 const session = document.querySelector(".minutes");
+const minuteDiv = document.querySelector(".minutes");
+const secondDiv = document.querySelector(".seconds");
 let myInterval;
 let state = true;
 let totalSeconds;
@@ -10,8 +12,8 @@ let paused = false;
 
 const updateSeconds = () => {
     // code
-    const minuteDiv = document.querySelector(".minutes");
-    const secondDiv = document.querySelector(".seconds");
+    // const minuteDiv = document.querySelector(".minutes");
+    // const secondDiv = document.querySelector(".seconds");
 
     totalSeconds--
 
@@ -47,13 +49,22 @@ const appTimer = () => {
 const timerPause = () => {
     if (paused === false) {
         clearInterval(myInterval);
-        paused = true
-        pauseBtn.textContent = "resume"
+        paused = true;
+        pauseBtn.textContent = "resume";
     } else {
         myInterval = setInterval(updateSeconds, 1000);
-        pauseBtn.textContent = "pause"
-        paused = false
+        pauseBtn.textContent = "pause";
+        paused = false;
     }
+}
+
+const timerReset = () => {
+    clearInterval(myInterval);
+    state = true;
+    paused = false;
+    pauseBtn.textContent = "pause";
+    minuteDiv.textContent = "25";
+    secondDiv.textContent = "00";
 }
 
 startBtn.addEventListener("click", appTimer);
