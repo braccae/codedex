@@ -1,38 +1,42 @@
 const bells = new Audio("src/bell.wav");
 const startBtn = document.querySelector(".btn-start");
+const pauseBtn = document.querySelector(".btn-pause");
+const resetBtn = document.querySelector(".btn-reset");
 const session = document.querySelector(".minutes");
 let myInterval;
 let state = true;
+let totalSeconds;
+let paused = false;
+
+const updateSeconds = () => {
+    // code
+    const minuteDiv = document.querySelector(".minutes");
+    const secondDiv = document.querySelector(".seconds");
+
+    totalSeconds--
+
+    let minutesLeft = Math.floor(totalSeconds / 60);
+    let secondsLeft = totalSeconds % 60;
+
+    if (secondsLeft < 10) {
+        secondDiv.textContent = "0" + secondsLeft;
+    } else {
+        secondDiv.textContent = secondsLeft;
+    }
+    minuteDiv.textContent = `${minutesLeft}`;
+
+    if (minutesLeft === 0 && secondsLeft === 0) {
+        bells.play();
+        clearInterval(myInterval);
+    }
+};
 
 const appTimer = () => {
     const sessionAmount = Number.parseInt(session.textContent);
 
     if (state) {
         state = false;
-        let totalSeconds = sessionAmount * 60;
-
-        const updateSeconds = () => {
-            // code
-            const minuteDiv = document.querySelector(".minutes");
-            const secondDiv = document.querySelector(".seconds");
-
-            totalSeconds--
-
-            let minutesLeft = Math.floor(totalSeconds / 60);
-            let secondsLeft = totalSeconds % 60;
-
-            if (secondsLeft < 10) {
-                secondDiv.textContent = "0" + secondsLeft;
-            } else {
-                secondDiv.textContent = secondsLeft;
-            }
-            minuteDiv.textContent = `${minutesLeft}`;
-
-            if (minutesLeft === 0 && secondsLeft === 0) {
-                bells.play();
-                clearInterval(myInterval);
-            }
-        };
+        totalSeconds = sessionAmount * 60;
 
         myInterval = setInterval(updateSeconds, 1000);
     } else {
@@ -40,4 +44,18 @@ const appTimer = () => {
     }
 }
 
+const timerPause = () => {
+    if (paused === false) {
+        clearInterval(myInterval);
+        paused = true
+        pauseBtn.textContent = "resume"
+    } else {
+        myInterval = setInterval(updateSeconds, 1000);
+        pauseBtn.textContent = "pause"
+        paused = false
+    }
+}
+
 startBtn.addEventListener("click", appTimer);
+pauseBtn.addEventListener("click", timerPause);
+resetBtn.addEventListener("click", timerReset);
