@@ -13,6 +13,8 @@ for the most part, the code methods are similar, google requires a different con
 
 Sources used:
 
+`https://ai.google.dev/gemini-api/docs/quickstart#python_1`
+
 `https://ai.google.dev/gemini-api/docs/text-generation#python_2`
 
 `https://ai.google.dev/api/generate-content#v1beta.GenerationConfig`
